@@ -2,7 +2,7 @@
   "name": "path-finding",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://isaiasdelabarra.github.io/Pathfinder-app",
+  "homepage": "https://isaiasdelabarra.github.io/Pathfinder-app/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
