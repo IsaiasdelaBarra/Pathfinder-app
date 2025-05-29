@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import PathfindingVisualizer from './PathFindingVisualizador/PathFindingVisualizador';
+import PathfindingVisualizer from './PathFindingVisualizador/PathFindingVisualizador.jsx';
 
 function App() {
   return (
