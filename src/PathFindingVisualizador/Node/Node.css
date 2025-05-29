@@ -1,0 +1,227 @@
+.node {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid rgb(175, 216, 248);
+  display: inline-block;
+}
+
+.node-finish {
+  background-color: red;
+}
+
+.node-start {
+  background-color: green;
+}
+
+.node-visited {
+    background-color: blue;
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+.node-wall {
+  background-color: rgb(12, 53, 71);
+}
+
+.node-shortest-path {
+  animation-name: shortestPath;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}
+
+
+/* Navbar y leyendas en html */
+.navbar {
+  background: #34495e;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.navbar-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 24px;
+}
+.navbar-options button {
+  margin: 0 8px;
+  background: #ffb300;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-options button:hover {
+  background: #ffd740;
+  color: #000;
+}
+.visualize-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 4px 0;
+}
+
+.visualize-btn {
+  min-width: 140px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  background: #ffb300;
+  color: #222;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.visualize-center .visualize-btn:hover {
+  background: #4f7e53;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1em;
+}
+.icon.box {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bbb;
+  background: #fff;
+  vertical-align: middle;
+}
+
+
+.speed-select {
+  margin-left: 8px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+}
+
+.tutorial-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 20px 28px;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+
+
+.tutorial-buttons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tutorial-buttons button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  background: #ffb300;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tutorial-buttons button:disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+
+.icon.box.visited { background: #b39ddb; }
+.icon.box.shortest { background: #fff59d; }
+.icon.box.wall { background: #263238; }
+
